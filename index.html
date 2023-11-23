@@ -4,15 +4,266 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.18/c3.css">
     <title>index</title>
-    <script type="module" crossorigin src="/F2E-taskTwo/assets/main-71c30259.js"></script>
-    <link rel="stylesheet" href="/F2E-taskTwo/assets/main-accf464b.css">
+    <script type="module" crossorigin src="/F2E-taskTwo/assets/main-54a7305e.js"></script>
+    <link rel="stylesheet" href="/F2E-taskTwo/assets/main-1cfd2599.css">
   </head>
   <body>
+    <div class="bg-primary d-flex align-items-center px-7 py-3">
+    <div class="container">
+        <h4 class="fw-bold text-light">2020 開票地圖</h4>
+    </div>
     
+</div>    <div class="container">
+      <div class="row pt-6">
+        <div class="col-12">
+          <div class="d-flex">
+            <h6 class="fw-bold border-bottom border-4 border-primary">第15任 總統副總統大選</h6>
+            <p class="fs-6 ms-4 text-white-dark">第10任 立法委員選舉</p>
+          </div>
+        </div>
+      </div>
+      <!-- PC版 選單 -->
+      <div class="d-none d-lg-block">
+        <div class="row mb-6">
+          <div class="col-2">
+            <select class="form-select bg-light" aria-label="Default select example">
+              <option selected>請選擇</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+          <div class="col-2">
+            <select class="form-select bg-light" aria-label="Default select example">
+              <option selected>請選擇</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+          <div class="col-2">
+            <select class="form-select bg-light" aria-label="Default select example">
+              <option selected>請選擇</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+          <div class="col-1">
+            <button type="reset" class="btn btn-primary d-flex align-items-center">
+              清除
+              <span class="material-symbols-outlined">
+                refresh
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!--Mobile 版 選單 -->
+      <div class="d-lg-none">
+        <div class="row">
+          <div class="col-10">
+            <div class="row flex-wrap">
+              <div class="col-12 mb-3">
+                <select class="form-select bg-light" aria-label="Default select example">
+                  <option selected>請選擇</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+              <div class="col-6">
+                <select class="form-select bg-light" aria-label="Default select example">
+                  <option selected>請選擇</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+              <div class="col-6">
+                <select class="form-select bg-light" aria-label="Default select example">
+                  <option selected>請選擇</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-2 h-100">
+            <button type="reset" class="btn btn-primary d-flex align-items-center">
+              <span class="material-symbols-outlined">
+                refresh
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="container pb-7">
+      <div class="d-flex justify-content-between">
+        <div class="bg-light d-flex flex-column p-4 border border-light rounded-3">
+          <h6 class="fw-bold mb-4">投票概況</h6>
+          <div class="d-flex flex-column">
+            <!-- 圖表1 -->
+            <div>
+              <div class="d-flex">
+                <div id="chart"></div>
+                <p class="fs-6 fw-bold">
+                  74.9%
+                  <br>
+                  投票率
+                </p>
+              </div>
+              <div class="mt-4">
+                <p class="mb-2">
+                  投票數 <span class="fw-bold"> 14,464,571 票</span>
+                </p>
+                <p class="mb-2">
+                  無效票數 <span class="fw-bold">163,631 票</span> 
+                </p>
+                <p class="mb-2">
+                  有效票數<span class="fw-bold">14,300,940 票</span> 
+                </p>
+              </div>
+            </div>
+             <!-- 圖表2 -->
+            <div>
+              <div id="chart2"></div>
+              <div class="d-flex flex-column">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <p class="bg-green bg-num fs-sm">3</p>
+                  <div class="d-flex flex-column pe-4 border-end border-green border-4">
+                    <h7 class="fs-7 fw-bold font-NotoSans">民主進步黨</h7>
+                    <small class="fs-sm font-NotoSans">蔡英文｜賴清德</small>
+                  </div>
+                  <div class="d-flex flex-column ">
+                    <p class="fs-7 fw-bold">57.13 %</p>
+                    <p class="fs-sm">8,170,231 票</p>
+                  </div>
+
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <p class="bg-blue bg-num fs-sm">2</p>
+                  <div class="d-flex flex-column pe-4 border-end border-blue border-4">
+                    <h7 class="fs-7 fw-bold font-NotoSans">中國國民黨</h7>
+                    <small class="fs-sm font-NotoSans">韓國瑜｜張善政</small>
+                  </div>
+                  <div class="d-flex flex-column ">
+                    <p class="fs-7 fw-bold">38.61 %</p>
+                    <p class="fs-sm">5,522,119 票</p>
+                  </div>
+
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <p class="bg-orange bg-num fs-sm">3</p>
+                  <div class="d-flex flex-column pe-4 border-end border-orange border-4">
+                    <h7 class="fs-7 fw-bold font-NotoSans">親民黨</h7>
+                    <small class="fs-sm font-NotoSans">宋楚瑜｜余湘</small>
+                  </div>
+                  <div class="d-flex flex-column ">
+                    <p class="fs-7 fw-bold">4.26 %</p>
+                    <p class="fs-sm">608,590 票</p>
+                  </div>
+
+                </div>
+
+
+              </div>
+            </div>
+            
+          </div>
+            
+        </div>
+        <!-- 台灣地圖 -->
+        <div class="">
+          <div class="bg-tips mb-4">
+            <h6 class="fw-bold d-flex align-items-center">
+              <span class="material-symbols-outlined">
+                info
+              </span>
+              小提示
+            </h6>
+            <p class="mb-7">點擊選擇縣市、區、村里，可查看選舉結果</p>
+            <div class="position-relative d-flex justify-content-center mb-5">
+              <div class="position-absolute ">
+                <img src="data:image/png;base64,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" alt="click" >
+              </div>
+              <select class="form-select bg-light w-50" aria-label="Default select example">
+                <option selected>請選擇</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+          </div>
+          <div class="bg-tips">
+            <h6 class="fw-bold d-flex align-items-center">
+              <span class="material-symbols-outlined">
+                info
+              </span>
+              小提示
+            </h6>
+            <p class="mb-7">點擊地圖查看縣市的選舉結果</p>
+            <div class="position-relative d-flex justify-content-center mb-5">
+              <div class="position-absolute ">
+                <img src="data:image/png;base64,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" alt="click" >
+              </div>
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG8AAAApCAYAAAA7xHcRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKrSURBVHgB7ZtPbtNAFMbfc8ZSu+sR0hsEiVbiFnACygoiFjlA+ZMusoYNqli1OQHOCXBXSGURcwJyhKzB8WNmQotpk8b2jMee5P2kyFEUJ4tP3+T73kwQamI4vTgI018DIDohhC4wJaE5ACbqQZBN3h7147vvQKiB4bfzbtjBryyaPRBhtsjo7N1x//L2NbAMC1c7SZrSs+GT/iwAy4QieM7C1UpPiGCqTGLVeeoDhcCfwLggtuo8EeJ7YByBPWvOG12fy1SJF8A4w6Lz2HWOsbNsLl3HIcUlGdHYeNnkatAMsi4cGjtPhRQWzi2qsBv3POU6IDgBxilZBhN1NRIvFPgBGPcgRfoCFeFq0AxqyTx9/OpQPTdwHleDJlDD6ZvnlcQbff/MIaUBCAx3FZbzS5jKWw+AcYTa2wvO3hy9/Jh/VUBJ9PySgIWrHZoT4ViFk1UbsYpSzuNdg9qJ5dJ4pa7rBMtTynl6kgKMZWLZ3CZpipEq3iXuKy4ezy9tsTybgnI2+Tvci4aPXsyhIiWcx9WgOv9+vxZiLzERLE8h8XQ1AOoCUxgkmGUgx1gPBA7j79j0Bg4ppdCBI6AsOj1+nUDNbHTe32rArCfWgUPsX9paDovyoPNG1596hJ0pMDlojoiR3A29Mg0cpmxwXucLMFBX4DBlrXi7Xg104EAaQ8HC3AQrl80dPtoQVy3MTbDSeUIEg92oBjd/5mgmcJhyz3nbXw2WgSOTgi06+7FvguW557ztrAabJ/Q+8p94OqRsz4GiUhN6H7njPO/nl7FPgcOUW/H8rAb2JvQ+ogOLX9WgnYW5CbTz9Klnaq9wLib0PoItrgZOJ/Q+ItSp5xY1g9jXwtwEQgr3FBqjPRN6HxHqIKdMLYP6z2Hqs4czREqIsh8kU+KuBw5T/gDprmmIGGaWXwAAAABJRU5ErkJggg==" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+  
    
 
+        <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.18/c3.js"></script>
+    <script src="https://unpkg.com/topojson-client@3"></script>
+    <script src="https://unpkg.com/topojson-simplify@3"></script>
+    <script>
+      const chart = c3.generate({
+        bindto: '#chart', // HTML 元素綁定
+        data: {
+          columns: [
+            ['data1', 75],
+            ['data2', 25]
+          ], // 資料存放
+          type: "donut",
+          colors:{
+            "data1":"#262E49",
+            "data2":"#DEE0E4"
+          }
+        },     
+      });
+      const chart2 = c3.generate({
+        bindto: '#chart2', // HTML 元素綁定
+        data: {
+          columns: [
+            ['data1', 57],
+            ['data2', 38],
+            ['data3', 4]
+          ], // 資料存放
+          type: "donut",
+          colors:{
+            "data1":"#84CB98",
+            "data2":"#8894D8",
+            "data3":"#DFA175"
+          }
+        },     
+      });
+    </script>
     
     
+    <script src="../assets/js/chart.js"></script>
   </body>
 </html>
