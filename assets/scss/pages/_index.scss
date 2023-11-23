@@ -1,3 +1,32 @@
-.index-title {
-  font-size: 100px;
+.counties {
+  fill:#33474e;
+}
+.counties :hover {
+  fill: #7f9ca7;
+  transition: 0.5s;
+}
+.county-borders {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 0.5px;
+}
+#chart,#chart2{
+  width: 300px;
+  height: 300px;
+}
+.bg-num {
+  width: 24px;
+  height: 24px;
+  border-radius: 100px;
+  font-size: 12px;
+  color: #fff;
+  padding: 4px 9px 3px 8px;
+}
+.font-NotoSans {
+  font-family:'Noto Sans', sans-serif;
+}
+.bg-tips {
+  background-color: #DEE0E4;
+  padding: 20px;
+  border-radius: 8px;
 }
